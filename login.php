@@ -1,8 +1,8 @@
 <?php
+    require_once 'header.php';
     if(isset($_SESSION['login'])){
         header("Location:index.php");
     }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

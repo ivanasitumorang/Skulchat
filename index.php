@@ -1,6 +1,5 @@
 <?php
-    require_once 'functions.php';
-    session_start();
+    require 'header.php';
     if(!isset($_SESSION['login'])){
         header("Location:login.php");
     }

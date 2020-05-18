@@ -1,5 +1,6 @@
 <?php
     require 'koneksi.php';
+
     function query($query){
         global $dsn;
         return $dsn->prepare($query);
@@ -29,3 +30,9 @@
         $result = $sts->get_result();
         return $result->num_rows;
     }
+    function executeQuery($query){
+        global $dsn;
+        $link = new mysqli('localhost','root','','skulchat');
+        return mysqli_query($dsn, $query);
+    }
+?>

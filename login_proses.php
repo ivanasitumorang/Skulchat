@@ -1,6 +1,5 @@
 <?php
-    session_start();
-    require_once 'functions.php';
+    require_once 'header.php';
     $username = $_POST['username'];
     $pass = $_POST['password'];
 
@@ -11,6 +10,7 @@
     $sts->execute();
     if(numrow($sts)){
         $_SESSION['login'] = true;
+        $_SESSION['username'] = $username;
         header("Location:index.php");
     }else{
         header("Location:login.php");
